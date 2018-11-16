@@ -1,0 +1,14 @@
+dockergc:
+    image: netresearch/docker-gc-cron:latest
+    container_name: docker-gc
+    net: "none"
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      # By default, docker-gc is run every night at midnight. Change this variable to override.
+      - CRON=* * * * *
+
+      # If you don't like all your log output and cron times being in UTC, you can set the
+      # TZ variable to override the default.
+      #- TZ=America/New_York
