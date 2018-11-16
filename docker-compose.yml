@@ -6,8 +6,10 @@ dockergc:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      # By default, docker-gc is run every night at midnight. Change this variable to override.
+      # By default, docker-gc is run every minute. Change this variable to override.
       - CRON=* * * * *
+      # true all unused images not just dangling ones, false or not set remove only dangling images
+      - FORCE_DANGLING=true/false
 
       # If you don't like all your log output and cron times being in UTC, you can set the
       # TZ variable to override the default.
