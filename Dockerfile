@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine
 
 ENV DOCKER_CHANNEL=stable \
     DOCKER_ARCH=x86_64 \

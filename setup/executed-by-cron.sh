@@ -3,7 +3,7 @@
 echo "[$(date)] Docker GC starting." >> /var/log/cron.log 2>&1
 
 
-if [ -n "$FORCE_DANGLING" ] && [ "$FORCE_DANGLING" = "true" ]; then
+if [ -n "$FORCE_IMAGES" ] && [ "$FORCE_IMAGES" = "true" ]; then
    FORCE='-a'
    echo 'force images' >> /var/log/cron.log 2>&1
 else
