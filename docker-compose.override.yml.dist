@@ -1,0 +1,4 @@
+dockergc:
+    environment:
+      - CRON=* * * * *
+      - FORCE_IMAGES=true

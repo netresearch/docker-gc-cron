@@ -9,7 +9,7 @@ dockergc:
       # By default, docker-gc is run every minute. Change this variable to override.
       - CRON=* * * * *
       # true all unused images not just dangling ones, false or not set remove only dangling images
-      - FORCE_IMAGES=true
+      - FORCE_IMAGES=false
 
       # If you don't like all your log output and cron times being in UTC, you can set the
       # TZ variable to override the default.
